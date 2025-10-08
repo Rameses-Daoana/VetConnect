@@ -60,6 +60,7 @@ body {
 }
 
 /* Buttons */
+/* General button styles */
 .btn {
   background: white;  /* White background for the log in button */
   color: #333;        /* Dark text for the log in button */
@@ -77,15 +78,16 @@ body {
   border: none;        /* Remove border for register button */
 }
 
-
+/* Optional: Hover effect for both buttons */
 .btn:hover {
   opacity: 0.8;
 }
 
-
+/* Hover effect for the Register button */
 .register:hover {
   opacity: 0.9;
 }
+
 
 /* Hero */
 .hero img {
