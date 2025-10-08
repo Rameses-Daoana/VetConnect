@@ -6,6 +6,7 @@ document.getElementById("petForm").addEventListener("submit", function(event) {
 
   if (petName && petType) {
     alert(`Pet Registered ✅\nName: ${petName}\nType: ${petType}`);
+    window.location.href = "booking4.html";
   } else {
     alert("Please fill out all required fields.");
   }

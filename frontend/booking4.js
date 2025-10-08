@@ -7,6 +7,7 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
 
   if (visitType && preferredDay && preferredTime) {
     alert(`✅ Appointment Submitted!\n\nType: ${visitType}\nDay: ${preferredDay}\nTime: ${preferredTime}`);
+    window.location.href = "booking5.html";
   } else {
     alert("⚠️ Please complete all fields before submitting.");
   }
