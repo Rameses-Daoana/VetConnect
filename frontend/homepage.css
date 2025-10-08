@@ -61,16 +61,30 @@ body {
 
 /* Buttons */
 .btn {
-  background: #444;
-  color: white;
-  border: none;
+  background: white;  /* White background for the log in button */
+  color: #333;        /* Dark text for the log in button */
+  border: 1px solid #ccc; /* Light border for the log in button */
   padding: 6px 12px;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none; /* Removes underline from the link */
 }
 
-.btn-register {
-  background: #4b5320;
+/* Specific styles for the "Register" button */
+.register {
+  background: #4b5320; /* Green background for the register button */
+  color: white;        /* White text for the register button */
+  border: none;        /* Remove border for register button */
+}
+
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+
+.register:hover {
+  opacity: 0.9;
 }
 
 /* Hero */
