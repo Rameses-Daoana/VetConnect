@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Form</title>
+  <link rel="stylesheet" href="booking3.css">
+</head>
+<body>
+
+  <!-- Back Button -->
+  <button class="back-btn">←</button>
+
+  <!-- Form -->
+  <div class="form-container">
+    <form id="petForm">
+      <div class="form-group">
+        <label for="petName">Pet's name *</label>
+        <input type="text" id="petName" placeholder="Enter your pet's name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="petType">Type of pet *</label>
+        <select id="petType" required>
+          <option value="">Select pet type</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="bird">Bird</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-next">NEXT →</button>
+    </form>
+  </div>
+
+  <script src="booking.js"></script>
+</body>
+</html>

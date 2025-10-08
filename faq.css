@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  overflow-y: scroll;
+}
+
+/* Navigation */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #222;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a:hover, nav a.active {
+  text-decoration: underline;
+}
+
+.buttons button {
+  padding: 6px 12px;
+  border: 1px solid #333;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons .register {
+  background: #3e4b2f;
+  color: white;
+  margin-left: 5px;
+}
+
+/* FAQ Header */
+.faq-header {
+  background-color: #4a5130;
+  color: white;
+  padding: 60px 40px;
+  text-align: left;
+}
+
+.faq-header p {
+  max-width: 700px;
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+#faqSearch {
+  margin-top: 25px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 250px;
+}
+
+/* FAQ Grid */
+.faq-section {
+  padding: 50px 40px;
+  background-color: #fff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.faq-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fafafa;
+  transition: 0.3s;
+}
+
+.faq-box:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faq-box h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.faq-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #1e1e1e;
+  color: white;
+  padding: 30px 40px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-left img {
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.social-icons img {
+  width: 18px;
+  margin-right: 8px;
+  filter: invert(1);
+}
+
+.footer-right h4 {
+  margin-bottom: 10px;
+}
+
+.footer-right p {
+  font-size: 13px;
+  color: #ccc;
+}

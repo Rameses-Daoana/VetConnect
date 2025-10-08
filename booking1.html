@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vet Connect Form</title>
+  <link rel="stylesheet" href="booking1.css">
+</head>
+<body>
+    
+    <!-- Back Button -->
+    <button class="back-btn">&#8592;</button>
+
+    <!-- Form -->
+    <form class="form-container" id="appointmentForm">
+      <!-- Name -->
+      <label for="name">Your name *</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <!-- Email -->
+      <label for="email">Email *</label>
+      <div class="input-icon">
+        <span class="icon">📧</span>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Phone -->
+      <label for="phone">Phone number</label>
+      <div class="phone-field">
+        <select id="country">
+          <option value="ph">🇵🇭 +63</option>
+          <option value="us">🇺🇸 +1</option>
+          <option value="uk">🇬🇧 +44</option>
+        </select>
+        <input type="tel" id="phone" placeholder="912 345 6789">
+      </div>
+
+      <!-- Button -->
+      <button type="submit" class="next-btn">NEXT →</button>
+    </form>
+  </section>
+
+  <script src="booking1.js"></script>
+</body>
+</html>

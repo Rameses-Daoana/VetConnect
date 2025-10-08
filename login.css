@@ -1,0 +1,105 @@
+/* Global container */
+.login-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Left section */
+.login-left {
+  flex: 1;
+  background: url("animals-bg.png") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.brand {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo-circle img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* Right section */
+.login-right {
+  flex: 1;
+  background-color: #2C2C2C;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2 {
+  margin-bottom: 10px;
+}
+
+.welcome {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+input {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.forgot {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.login-btn {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #808933;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #6e772b;
+}
+
+.signup-text {
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+
+.signup-link {
+  color: #b6c74f;
+  cursor: pointer;
+}

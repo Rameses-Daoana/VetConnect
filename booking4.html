@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Form</title>
+  <link rel="stylesheet" href="booking4.css">
+</head>
+<body>
+
+  <!-- Back Button -->
+  <button class="back-btn">←</button>
+
+  <!-- Appointment Form -->
+  <div class="form-container">
+    <form id="appointmentForm">
+      
+      <!-- Type of Visit -->
+      <div class="form-group">
+        <label for="visitType">Type of visit *</label>
+        <select id="visitType" required>
+          <option value="">Select visit type</option>
+          <option value="checkup">Check-up</option>
+          <option value="vaccination">Vaccination</option>
+          <option value="surgery">Surgery</option>
+          <option value="grooming">Grooming</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <!-- Preferred Day -->
+      <div class="form-group">
+        <label for="preferredDay">Please select your preferred day *</label>
+        <input type="date" id="preferredDay" required>
+      </div>
+
+      <!-- Preferred Time -->
+      <div class="form-group">
+        <label for="preferredTime">Please select your preferred time *</label>
+        <input type="time" id="preferredTime" required>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn-submit">SUBMIT</button>
+    </form>
+  </div>
+
+  <script src="booking4.js"></script>
+</body>
+</html>
