@@ -59,35 +59,42 @@ body {
   border-radius: 5px;
 }
 
-/* Buttons */
-/* General button styles */
-.btn {
-  background: white;  /* White background for the log in button */
-  color: #333;        /* Dark text for the log in button */
-  border: 1px solid #ccc; /* Light border for the log in button */
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none; /* Removes underline from the link */
+/* Modify the navbar to include buttons on the right (like in FAQ page) */
+.navbar .buttons {
+  display: flex;
+  gap: 10px;
 }
 
-/* Specific styles for the "Register" button */
+.navbar .buttons button {
+  padding: 8px 15px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* General button styles */
+.btn {
+  background: white; /* White background for the log in button */
+  color: #333;       /* Dark text for the log in button */
+  border: 1px solid #ccc; /* Light border for the log in button */
+}
+
 .register {
   background: #4b5320; /* Green background for the register button */
   color: white;        /* White text for the register button */
   border: none;        /* Remove border for register button */
 }
 
-/* Optional: Hover effect for both buttons */
+/* Hover effect for the buttons */
 .btn:hover {
-  opacity: 0.8;
+  background-color: #f0f0f0;
 }
 
-/* Hover effect for the Register button */
 .register:hover {
-  opacity: 0.9;
+  background-color: #3a5c36; /* Darker green for hover effect */
 }
-
 
 /* Hero */
 .hero img {
@@ -179,7 +186,6 @@ footer {
 
 .footer-right h4 {
   margin-bottom: 8px;
-
 }
 
 .footer-right p {
