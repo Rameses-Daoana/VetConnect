@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="user.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">👤</div>
+        <h3>Eren Jaeger</h3>
+        <p>eren@gmail.com</p>
+      </div>
+      <nav class="menu">
+        <a href="#"><i>🏠</i> Home</a>
+        <a href="#"><i>❓</i> FAQs</a>
+        <a href="#"><i>🔔</i> Notification</a>
+        <a class="active" href="#"><i>📊</i> Dashboard</a>
+        <a href="#"><i>⚙️</i> Settings</a>
+      </nav>
+      <div class="help">
+        <a href="#"><i>💬</i> Need help?</a>
+      </div>
+      <button class="logout">🚪 Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header>
+        <div class="logo">VETCONNECT <span>CPC</span></div>
+        <input type="text" placeholder="Search...">
+      </header>
+
+      <section class="stats">
+        <div class="card">
+          <h2>77</h2>
+          <p>Visits</p>
+        </div>
+        <div class="card">
+          <h2>4</h2>
+          <p>Years of service</p>
+        </div>
+        <div class="card">
+          <h2>3</h2>
+          <p>Upcoming appointments</p>
+        </div>
+        <div class="card">
+          <h2>98</h2>
+          <p>Hours</p>
+        </div>
+      </section>
+
+      <section class="appointments">
+        <h3>Appointments</h3>
+        <div class="calendar">
+          <div id="calendar"></div>
+        </div>
+      </section>
+
+      <footer>
+        <p><strong>Contact Info:</strong><br>
+          Address: Amistad Street, Dagupan City, Pangasinan<br>
+          Phone: (800) 123-4567<br>
+          Email: support@vetconnect.com
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="user.js"></script>
+</body>
+</html>

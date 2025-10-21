@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reset Password - VetConnect</title>
+  <link rel="stylesheet" href="reset.css" />
+</head>
+<body>
+  <header>
+    <h2 class="logo">VetConnect</h2>
+  </header>
+
+  <main>
+    <div class="reset-box">
+      <h2>Reset password</h2>
+      <form id="resetForm">
+        <label for="newPassword">New password</label>
+        <input type="password" id="newPassword" placeholder="Enter new password" required>
+
+        <label for="confirmPassword">Confirm password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm new password" required>
+
+        <button type="submit">Confirm</button>
+      </form>
+      <p id="message"></p>
+    </div>
+  </main>
+
+  <script src="reset.js"></script>
+</body>
+</html>
