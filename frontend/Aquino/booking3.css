@@ -1,0 +1,171 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('img/bg12.jpg')
+              no-repeat center/cover;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 35px;
+}
+
+.nav-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2b3a1a;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  background-color: #2b3a1a;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+/* Form Section */
+.review-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 120px;
+  position: relative;
+}
+
+.form-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.form-card h1 {
+  text-align: center;
+  color: #2b3a1a;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.form-card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.form-group {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 6px 0;
+  background: transparent;
+  outline: none;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  margin: 20px 0;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background-color: #616c55;
+}
+
+.submit-btn {
+  background-color: #4a593d;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Pet Image */
+.pets-img {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  width: 250px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer-left i {
+  margin-right: 10px;
+  color: #2b3a1a;
+  cursor: pointer;
+}
+
+.footer-center p,
+.footer-right p {
+  margin: 2px 0;
+}

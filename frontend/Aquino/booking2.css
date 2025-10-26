@@ -1,0 +1,196 @@
+/* BODY BACKGROUND */
+/* 👇 Replace 'background.jpg' with your own background image file */
+body {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("img/bg12.jpg") no-repeat center center/cover;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Left side (logo + name) */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.logo-section h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Right side (links + button) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #008000; /* hover green */
+}
+
+/* Book Appointment button */
+.book-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #333;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a.active, nav a:hover {
+  color: #2e7d32;
+}
+
+/* APPOINTMENT FORM */
+.appointment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.appointment-section h1 {
+  color: green;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+  border-top: 2px solid #ddd;
+}
+
+footer .socials a {
+  color: black;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: #47523e;
+}
+
+footer .contact p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+} 
+
+form {
+  background-color: #fff;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input, select {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #2e7d32;
+}
+
+.submit-btn {
+  display: inline-block;
+  background-color: green;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+
+ 

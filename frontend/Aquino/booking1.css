@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #333;
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: black;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('img/dogg.catt.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 80px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* overlay to make text readable */
+}
+
+.hero .overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.appointment-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.appointment-btn:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+  border-top: 2px solid #ddd;
+}
+
+footer .socials a {
+  color: black;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: #47523e;
+}
+
+footer .contact p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+footer .footer-logo img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}

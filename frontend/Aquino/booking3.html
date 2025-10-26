@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VetConnect | Review Appointment</title>
+  <link rel="stylesheet" href="booking3.css" />
+  <script src="booking3.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="img/logo white.jpg" alt="logo" class="logo">
+      <span class="nav-title">VetConnect</span>
+    </div>
+    <nav class="nav-links">
+      <a href="homepage.html">Home</a>
+       <a href="#" class="active">Book Appointment</a>
+      <a href="#">Need Help?</a>
+    </nav>
+  </header>
+
+  <!-- Review Form Section -->
+  <section class="review-section">
+    <div class="form-card">
+      <h1><i class="fa-solid fa-paw"></i> REVIEW APPOINTMENT</h1>
+
+      <h2>OWNER DETAILS</h2>
+      <div class="form-group">
+        <label>Full Name:</label>
+        <input type="text" id="ownerName" disabled>
+      </div>
+      <div class="form-group">
+        <label>Phone No:</label>
+        <input type="text" id="phone" disabled>
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" id="email" disabled>
+      </div>
+
+      <hr>
+
+      <h2>PET DETAILS</h2>
+      <div class="form-group">
+        <label>Pet's Name:</label>
+        <input type="text" id="petName" disabled>
+      </div>
+      <div class="form-group">
+        <label>Type of Pet:</label>
+        <input type="text" id="petType" disabled>
+      </div>
+
+      <hr>
+
+      <h2>VISIT DETAILS</h2>
+      <div class="form-group">
+        <label>Type of Visit:</label>
+        <input type="text" id="visitType" disabled>
+      </div>
+      <div class="form-group">
+        <label>Date of Visit:</label>
+        <input type="date" id="visitDate" disabled>
+      </div>
+      <div class="form-group">
+        <label>Time of Visit:</label>
+        <input type="time" id="visitTime" disabled>
+      </div>
+
+      <div class="button-container">
+        <button id="editBtn" class="edit-btn"><i class="fa-solid fa-pen-to-square"></i> EDIT</button>
+        <button id="submitBtn" class="submit-btn"><i class="fa-solid fa-paw"></i> SUBMIT</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-linkedin"></i>
+    </div>
+    <div class="footer-center">
+      <p>📞 (000) 123-4567</p>
+      <p>✉️ support@vetconnect.com</p>
+    </div>
+    <div class="footer-right">
+      <p>🏠 Arellano Street, Dagupan City, Pangasinan</p>
+    </div>
+  </footer>
+
+</body>
+</html>

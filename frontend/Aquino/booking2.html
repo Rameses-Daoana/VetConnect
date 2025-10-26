@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VetConnect | Add Appointment</title>
+  <link rel="stylesheet" href="booking2.css" />
+</head>
+<body>
+   <header class="navbar">
+    <div class="logo-section">
+      <img src="img/logo white.jpg" alt="VetConnect Logo" class="logo">
+      <h1>VetConnect</h1>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">FAQ</a>
+      <button class="book-btn">Book Appointment</button>
+      <a href="#">Need Help?</a>
+    </nav>
+  </header>
+
+
+  <!-- MAIN SECTION -->
+  <section class="appointment-section">
+    <h1>🐾 ADD APPOINTMENT</h1>
+    <form id="appointmentForm">
+      <div class="form-group">
+        <h3>OWNER DETAILS</h3>
+        <div class="form-row">
+          <input type="text" placeholder="Name" required>
+          <input type="text" placeholder="Surname" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="Phone No." required>
+          <input type="email" placeholder="Email" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h3>PET DETAILS</h3>
+        <div class="form-row">
+          <input type="text" placeholder="Pet's Name" required>
+          <select required>
+            <option value="">Type of Pet</option>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Bird</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h3>VISIT DETAILS</h3>
+        <div class="form-row">
+          <input type="text" placeholder="Type of Visit" required>
+          <input type="date" required>
+        </div>
+        <div class="form-row">
+          <select required>
+            <option value="">Time of Visit</option>
+            <option>9:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>1:00 PM</option>
+            <option>2:00 PM</option>
+            <option>3:00 PM</option>
+            <option>4:00 PM</option>
+          </select>
+        </div>
+      </div>
+
+      <a href="booking3.html" class="submit-btn">SUBMIT</a>
+
+    </form>
+  </section>
+
+   <!-- Footer -->
+  <footer>
+    <div class="socials">
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/x.png" alt="X"></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="contact">
+      <p><i class="fas fa-phone"></i> (000) 123-4567</p>
+      <p><i class="fas fa-envelope"></i> support@vetconnect.com</p>
+      <p>Arellano Street, Dagupan City, Pangasinan</p>
+    </div>
+
+  <script src="booking2.js"></script>
+</body>
+</html>
