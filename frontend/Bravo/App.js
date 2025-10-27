@@ -14,9 +14,10 @@ function App() {
           
           {/* Unified Admin Page - All routes handled by UnifiedAdminPage */}
           <Route path="/dashboard" element={<UnifiedAdminPage />} />
-          <Route path="/booking" element={<UnifiedAdminPage />} />
+          <Route path="/Appointments" element={<UnifiedAdminPage />} />
           <Route path="/schedule" element={<UnifiedAdminPage />} />
           <Route path="/settings" element={<UnifiedAdminPage />} />
+          <Route path="/customer-settings" element={<UnifiedAdminPage />} />
           <Route path="/faq" element={<UnifiedAdminPage />} />
           <Route path="/unified" element={<UnifiedAdminPage />} />
           
