@@ -9,7 +9,7 @@ const Customer = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [users, setUsers] = useState([
     {
-      id: 2,
+      id: 1,
       name: 'John Doe',
       email: 'johndoe@gmail.com',
       phone: '09457239087',
@@ -17,7 +17,7 @@ const Customer = () => {
       status: 'Active'
     },
     {
-      id: 3,
+      id: 2,
       name: 'Rameses Daoana',
       email: 'ramdaoana@gmail.com',
       phone: '09235618256',
@@ -25,7 +25,7 @@ const Customer = () => {
       status: 'Blocked'
     },
     {
-      id: 4,
+      id: 3,
       name: 'Christal Aquino',
       email: 'c.aquino@gmail.com',
       phone: '09386749256',
@@ -33,7 +33,7 @@ const Customer = () => {
       status: 'Blocked'
     },
     {
-      id: 5,
+      id: 4,
       name: 'Jneeza Dela Cruz',
       email: 'dc.jneeza@gmail.com',
       phone: '09284753965',
@@ -41,7 +41,7 @@ const Customer = () => {
       status: 'Active'
     },
     {
-      id: 6,
+      id: 5,
       name: 'Joseph Candelaria',
       email: 'candelaria.j@gmail.com',
       phone: '09569215867',
@@ -49,7 +49,7 @@ const Customer = () => {
       status: 'Active'
     },
     {
-      id: 7,
+      id: 6,
       name: 'Paul Bravo',
       email: 'bravo.paul@gmail.com',
       phone: '09475963645',
@@ -57,7 +57,7 @@ const Customer = () => {
       status: 'Blocked'
     },
     {
-      id: 8,
+      id: 7,
       name: 'Maria De Leon',
       email: 'maria.DL@gmail.com',
       phone: '09327596836',
@@ -229,5 +229,6 @@ const Customer = () => {
     </div>
   );
 };
+
 
 export default Customer;
