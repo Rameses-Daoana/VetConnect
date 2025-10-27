@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import ApexCharts from 'apexcharts';
 import 'apexcharts/dist/apexcharts.css';
-import { Settings, Upload, X, ChevronDown, ChevronUp, Search, Plus } from 'lucide-react';
+import { Settings, Upload, X, ChevronDown, ChevronUp, Search, Plus,Users, Eye, Edit, Trash2 } from 'lucide-react';
 import './UnifiedAdminPage.css';
 
 const UnifiedAdminPage = () => {
@@ -13,9 +13,9 @@ const UnifiedAdminPage = () => {
   const getTabFromPath = (path) => {
     const pathMap = {
       '/dashboard': 'Dashboard',
-      '/booking': 'Booking',
+      '/appointments': 'Appointments',
       '/schedule': 'Schedule',
-      '/users': 'Users',
+      '/customer-settings': 'Customer Settings',
       '/settings': 'Settings',
       '/faq': 'FAQ',
       '/': 'Dashboard',
@@ -123,6 +123,29 @@ const UnifiedAdminPage = () => {
     }
   ]);
 
+  // Customer Settings state
+const [searchQuery, setSearchQuery] = useState('');
+const [users, setUsers] = useState([
+  { id: 1, name: 'John Doe', email: 'johndoe@gmail.com', phone: '09457239087', dateJoined: '2025-08-10', status: 'Active' },
+  { id: 2, name: 'Rameses Daoana', email: 'ramdaoana@gmail.com', phone: '09235618256', dateJoined: '2025-08-12', status: 'Blocked' },
+  { id: 3, name: 'Christal Aquino', email: 'c.aquino@gmail.com', phone: '09386749256', dateJoined: '2025-08-13', status: 'Blocked' },
+  { id: 4, name: 'Jneeza Dela Cruz', email: 'dc.jneeza@gmail.com', phone: '09284753965', dateJoined: '2025-08-17', status: 'Active' },
+  { id: 5, name: 'Joseph Candelaria', email: 'candelaria.j@gmail.com', phone: '09569215867', dateJoined: '2025-08-20', status: 'Active' },
+  { id: 6, name: 'Paul Bravo', email: 'bravo.paul@gmail.com', phone: '09475963645', dateJoined: '2025-08-22', status: 'Blocked' },
+  { id: 7, name: 'Maria De Leon', email: 'maria.DL@gmail.com', phone: '09327596836', dateJoined: '2025-08-26', status: 'Blocked' }
+]);
+
+const filteredUsers = users.filter(user =>
+  user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  user.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  user.phone.includes(searchQuery)
+);
+
+const handleView = (id) => alert(`View user ${id}`);
+const handleEdit = (id) => alert(`Edit user ${id}`);
+const handleDelete = (id) => setUsers(users.filter(user => user.id !== id));
+
+
   // Update active tab when location changes
   useEffect(() => {
     const newTab = getTabFromPath(location.pathname);
@@ -134,9 +157,9 @@ const UnifiedAdminPage = () => {
     setActiveTab(tab);
     const pathMap = {
       'Dashboard': '/dashboard',
-      'Booking': '/booking',
+      'Appointments': '/appointments',
       'Schedule': '/schedule',
-      'Users': '/users',
+      'Customer Settings': '/customer-settings',
       'Settings': '/settings',
       'FAQ': '/faq'
     };
@@ -342,7 +365,7 @@ const UnifiedAdminPage = () => {
     { client: 'George Flemon', pet: 'Sporty', date: '2026-08-17', status: 'Completed' }
   ];
 
-  const menuItems = ['Dashboard', 'Booking', 'Schedule', 'Users', 'Settings', 'FAQ'];
+  const menuItems = ['Dashboard', 'Appointments', 'Schedule', 'Customer Settings', 'Settings', 'FAQ'];
 
   return (
     <div className="unified-container">
@@ -614,7 +637,7 @@ const UnifiedAdminPage = () => {
           )}
 
           {/* Booking/Appointments Content */}
-          {activeTab === 'Booking' && (
+          {activeTab === 'Appointments' && (
             <div className="appointments-card">
               <table className="appointments-table">
                 <thead>
@@ -680,6 +703,77 @@ const UnifiedAdminPage = () => {
               <p className="placeholder-text">Content for {activeTab} page will be displayed here.</p>
             </div>
           )}
+
+          {activeTab === 'Customer Settings' && (
+  <div className="users-card">
+    <div className="users-header">
+      <div className="header-title-section">
+        <Users size={24} />
+        <h2>Customer Settings</h2>
+      </div>
+
+      <div className="search-bar">
+        <Search className="search-icon" size={20} />
+        <input
+          type="text"
+          placeholder="Search users..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="search-input"
+        />
+      </div>
+    </div>
+
+    {filteredUsers.length > 0 ? (
+      <table className="users-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Date Joined</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredUsers.map((user) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.phone}</td>
+              <td>{user.dateJoined}</td>
+              <td>
+                <span className={`status-badge ${user.status.toLowerCase()}`}>
+                  {user.status}
+                </span>
+              </td>
+              <td>
+                <div className="action-buttons">
+                  <button className="action-btn view-btn" onClick={() => handleView(user.id)}>
+                    <Eye size={16} />
+                  </button>
+                  <button className="action-btn edit-btn" onClick={() => handleEdit(user.id)}>
+                    <Edit size={16} />
+                  </button>
+                  <button className="action-btn delete-btn" onClick={() => handleDelete(user.id)}>
+                    <Trash2 size={16} />
+                  </button>
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    ) : (
+      <div className="no-results">No users found.</div>
+    )}
+  </div>
+)}
+
+
+
+
         </div>
       </main>
     </div>
