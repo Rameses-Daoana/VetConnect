@@ -1,77 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Dashboard</title>
-  <link rel="stylesheet" href="user.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VetConnect | Users Page</title>
+  <link rel="stylesheet" href="user.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="profile">
-        <div class="avatar">👤</div>
-        <h3>Eren Jaeger</h3>
-        <p>eren@gmail.com</p>
+      <div class="logo">
+        <img src="img/logo white.jpg" alt="logo" />
+        <h2>VetConnect</h2>
       </div>
+
       <nav class="menu">
-        <a href="#"><i>🏠</i> Home</a>
-        <a href="#"><i>❓</i> FAQs</a>
-        <a href="#"><i>🔔</i> Notification</a>
-        <a class="active" href="#"><i>📊</i> Dashboard</a>
-        <a href="#"><i>⚙️</i> Settings</a>
+        <a href="dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a>
+        <a href="#"><i class="fa-solid fa-calendar-check"></i> Booking</a>
+        <a href="#"><i class="fa-solid fa-calendar-days"></i> Schedule</a>
+        <a href="#" class="active"><i class="fa-solid fa-user-group"></i> Users</a>
+        <a href="usersettings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a href="FaqM.html"><i class="fa-solid fa-circle-question"></i> FAQ</a>
       </nav>
-      <div class="help">
-        <a href="#"><i>💬</i> Need help?</a>
-      </div>
-      <button class="logout">🚪 Logout</button>
     </aside>
 
     <!-- Main Content -->
     <main class="main">
-      <header>
-        <div class="logo">VETCONNECT <span>CPC</span></div>
-        <input type="text" placeholder="Search...">
+      <header class="header">
+        <h1>Users Page</h1>
       </header>
 
-      <section class="stats">
-        <div class="card">
-          <h2>77</h2>
-          <p>Visits</p>
+      <section class="user-section">
+        <div class="user-header">
+          <h2><i class="fa-solid fa-users"></i> User List</h2>
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search here" />
+          </div>
         </div>
-        <div class="card">
-          <h2>4</h2>
-          <p>Years of service</p>
-        </div>
-        <div class="card">
-          <h2>3</h2>
-          <p>Upcoming appointments</p>
-        </div>
-        <div class="card">
-          <h2>98</h2>
-          <p>Hours</p>
+
+        <!-- Table -->
+        <div class="table-container">
+          <table id="userTable">
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date Joined</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td><td>John Doe</td><td>johndoe@gmail.com</td><td>0945723987</td><td>2025-08-10</td>
+                <td class="active">Active</td>
+                <td class="actions">
+                  <button class="view"><i class="fa-solid fa-eye"></i>VIEW</button>
+                  <button class="edit"><i class="fa-solid fa-pen"></i>EDIT</button>
+                  <button class="delete"><i class="fa-solid fa-trash">DELETE</i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td><td>Rameses DeGana</td><td>ramdeana@gmail.com</td><td>09235619826</td><td>2025-08-12</td>
+                <td class="blocked">Blocked</td>
+                <td class="actions">
+                  <button class="view"><i class="fa-solid fa-eye"></i>VIEW</button>
+                  <button class="edit"><i class="fa-solid fa-pen"></i>EDIT</button>
+                  <button class="delete"><i class="fa-solid fa-trash">DELETE</i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td><td>Christal Aquino</td><td>c.aquino@gmail.com</td><td>09386749256</td><td>2025-08-13</td>
+                <td class="blocked">Blocked</td>
+                <td class="actions">
+                  <button class="view"><i class="fa-solid fa-eye"></i>VIEW</button>
+                  <button class="edit"><i class="fa-solid fa-pen"></i>EDIT</button>
+                  <button class="delete"><i class="fa-solid fa-trash">DELETE</i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td><td>Jneeza Dela Cruz</td><td>dc.jneeza@gmail.com</td><td>09284753965</td><td>2025-08-17</td>
+                <td class="active">Active</td>
+                <td class="actions">
+                  <button class="view"><i class="fa-solid fa-eye"></i>VIEW</button>
+                  <button class="edit"><i class="fa-solid fa-pen"></i>EDIT</button>
+                  <button class="delete"><i class="fa-solid fa-trash">DELETE</i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td><td>Joseph Candelaria</td><td>jcandelaria1@gmail.com</td><td>09562138567</td><td>2025-08-20</td>
+                <td class="active">Active</td>
+                <td class="actions">
+                  <button class="view"><i class="fa-solid fa-eye"></i>VIEW</button>
+                  <button class="edit"><i class="fa-solid fa-pen"></i>EDIT</button>
+                  <button class="delete"><i class="fa-solid fa-trash">DELETE</i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td><td>Paul Bravo</td><td>bravo.paul@gmail.com</td><td>0947596345</td><td>2025-08-22</td>
+                <td class="blocked">Blocked</td>
+                <td class="actions">
+                  <button class="view"><i class="fa-solid fa-eye"></i>VIEW</button>
+                  <button class="edit"><i class="fa-solid fa-pen"></i>EDIT</button>
+                  <button class="delete"><i class="fa-solid fa-trash">DELETE</i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td><td>Maria De Leon</td><td>maria.DL@gmail.com</td><td>09327596836</td><td>2025-08-26</td>
+                <td class="blocked">Blocked</td>
+                <td class="actions">
+                  <button class="view"><i class="fa-solid fa-eye">VIEW</i></button>
+                  <button class="edit"><i class="fa-solid fa-pen"></i>EDIT</button>
+                  <button class="delete"><i class="fa-solid fa-trash">DELETE</i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
-
-      <section class="appointments">
-        <h3>Appointments</h3>
-        <div class="calendar">
-          <div id="calendar"></div>
-        </div>
-      </section>
-
-      <footer>
-        <p><strong>Contact Info:</strong><br>
-          Address: Amistad Street, Dagupan City, Pangasinan<br>
-          Phone: (800) 123-4567<br>
-          Email: support@vetconnect.com
-        </p>
-      </footer>
     </main>
   </div>
 
-  <script src="user.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
