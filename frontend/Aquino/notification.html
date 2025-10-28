@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="notification.css">
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar"></div>
+        <h3>Eren Jaeger</h3>
+        <p>Eren@gmail.com</p>
+      </div>
+      <nav>
+        <ul>
+          <li><i class="fas fa-home"></i> Home</li>
+          <li><i class="fas fa-question-circle"></i> FAQs</li>
+          <li class="active"><i class="fas fa-bell"></i> Notification</li>
+          <li><i class="fas fa-chart-line"></i> Dashboard</li>
+          <li><i class="fas fa-headset"></i> Need help?</li>
+          <li><i class="fas fa-cog"></i> Settings</li>
+        </ul>
+      </nav>
+      <button class="logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <input type="text" placeholder="Search" class="search-bar">
+      </header>
+
+      <section class="notifications">
+        <h2>Notifications</h2>
+
+        <div class="notif-card">
+          <div class="notif-icon"><i class="fas fa-syringe"></i></div>
+          <div class="notif-content">
+            <h3>Vaccination</h3>
+            <p>Your vaccination for Ming Ming is scheduled on October 30, 2025 at 2:00 PM.</p>
+          </div>
+          <button class="close-btn">&times;</button>
+        </div>
+
+        <div class="notif-card">
+          <div class="notif-icon"><i class="fas fa-check"></i></div>
+          <div class="notif-content">
+            <h3>Approved</h3>
+            <p>Your vaccination appointment for Ming Ming is approved.</p>
+          </div>
+          <button class="close-btn">&times;</button>
+        </div>
+
+        <div class="notif-card">
+          <div class="notif-icon"><i class="fas fa-times"></i></div>
+          <div class="notif-content">
+            <h3>Cancelled</h3>
+            <p>Your grooming booking for Deo was cancelled by the clinic.</p>
+          </div>
+          <button class="close-btn">&times;</button>
+        </div>
+      </section>
+
+      <footer>
+        <p><strong>Contact Us</strong></p>
+        <p>Address: Angeles Street, Dagupan City, Pangasinan</p>
+        <p>Phone: (032) 123-4567</p>
+        <p>Email: support@vetconnect.com</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="notification.js"></script>
+</body>
+</html>
