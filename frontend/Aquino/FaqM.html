@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VetConnect | FAQ Management</title>
+  <link rel="stylesheet" href="FaqM.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="img/logo white.jpg" alt="logo" />
+        <h2>VetConnect</h2>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a>
+        <a href="#"><i class="fa-solid fa-calendar-check"></i> Booking</a>
+        <a href="#"><i class="fa-solid fa-calendar-days"></i> Schedule</a>
+        <a href="useradmin.html"><i class="fa-solid fa-user-group"></i> Users</a>
+        <a href="usersettings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a href="#" class="active"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header class="header">
+        <h1>FAQ Management</h1>
+      </header>
+
+      <!-- Search and Add Button -->
+      <div class="faq-header">
+        <input type="text" id="faqSearch" placeholder="Search FAQs" />
+        <button id="addFaqBtn">Add New FAQ</button>
+      </div>
+
+      <!-- FAQ List -->
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">How do I book an appointment?</button>
+          <div class="faq-answer">
+            You can book an appointment through our online platform by selecting your preferred date, time, and veterinarian.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Do I need an account to book?</button>
+          <div class="faq-answer">
+            Yes, you’ll need to create an account to manage your appointments and view your pet’s records.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can I reschedule or cancel an appointment?</button>
+          <div class="faq-answer">
+            Absolutely! You can reschedule or cancel anytime through the booking dashboard before your scheduled visit.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What services does VetConnect offer?</button>
+          <div class="faq-answer">
+            We offer consultations, vaccinations, grooming, and emergency services for your pets.
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-left">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="logo" />
+          <span>VetConnect</span>
+        </div>
+        <div class="footer-right">
+          <a href="#">Admin Dashboard</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="FaqM.js"></script>
+</body>
+</html>
