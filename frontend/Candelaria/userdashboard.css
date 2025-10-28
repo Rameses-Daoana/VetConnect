@@ -1,0 +1,247 @@
+:root{
+  --header-height: 72px; /* used so sidebar sits below top header */
+  --sidebar-width: 260px;
+  --top-gap: 12px;
+  --footer-height: 72px;
+  --content-max-width: 1200px;
+  --bg: #369f44;
+  --card-bg: #fff;
+  --accent: #111827;
+  --muted: #666;
+}
+
+/* reset */
+* { box-sizing: border-box; }
+
+/* fill whole viewport with green background */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--accent);
+}
+
+/* main area takes full width now */
+.main {
+  margin-left: 0;
+  padding: 24px;
+  padding-bottom: calc(var(--footer-height) + 36px);
+  max-width: var(--content-max-width);
+  margin-right: auto;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height) - 48px);
+  color: var(--accent);
+}
+
+/* keep content constrained inside main */
+.content-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* pet title — placed immediately to the right of the sidebar */
+.pet-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+  align-self: flex-start;
+}
+
+/* cards area groups header + grid */
+.cards-area { display: flex; flex-direction: column; gap: 12px; }
+
+/* cards container to stretch cards */
+.cards-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* move the search + add to the right edge of the content area */
+.cards-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+/* search input: fixed comfortable width on wide screens, but remains responsive */
+.cards-header input[type="text"] {
+  width: 360px;
+  max-width: 45%;
+  min-width: 160px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 0.95rem;
+  flex: 0 0 auto;
+}
+
+/* add button sits to the right of the search */
+.cards-header .add-btn {
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* pet cards grid - 3 per row on desktop */
+.pet-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+/* pet card basics */
+.card {
+  background: var(--card-bg);
+  color: var(--accent);
+  flex: 1;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* responsive adjustments */
+@media (max-width: 1100px) {
+  .pet-container { grid-template-columns: repeat(2, 1fr); }
+  .cards-header input[type="text"] { width: 320px; max-width: 50%; }
+}
+@media (max-width: 900px) {
+  /* when screen is narrow, sidebar becomes stacked above content */
+  .main { margin-left: 12px; margin-right: 12px; padding-bottom: calc(var(--footer-height) + 24px); }
+  .pet-container { grid-template-columns: 1fr; }
+  .cards-header { justify-content: flex-start; gap: 8px; }
+  .cards-header input[type="text"] { width: 100%; max-width: none; min-width: 0; flex: 1 1 auto; }
+  .cards-header .add-btn { width: auto; }
+}
+@media (max-width: 700px) {
+  .pet-container { grid-template-columns: 1fr; }
+  .cards-header { flex-direction: column; align-items: stretch; }
+  .cards-header .add-btn { width: 100%; }
+}
+
+/* pet card: image left, info right */
+.pet-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: stretch;
+}
+
+/* left image column */
+.pet-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  flex: 0 0 160px;
+  display: block;
+}
+
+/* right content column */
+.pet-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+.pet-info h3 { margin: 0 0 6px; color: var(--accent); }
+.pet-info p { margin: 0; color: #444; font-size: 0.95rem; }
+
+/* actions row */
+.pet-buttons { display: flex; gap: 8px; margin-top: 8px; }
+.pet-buttons button { padding: 6px 8px; border-radius: 6px; border: none; cursor: pointer; }
+.edit-btn { background: #f3f4f6; }
+.delete-btn { background: #fee2e2; }
+
+/* stack vertically on small screens */
+@media (max-width: 700px) {
+  .pet-card { flex-direction: column; }
+  .pet-card img { width: 100%; height: 200px; flex: 0 0 auto; }
+  .pet-info { padding: 12px; }
+}
+
+/* --- Calendar specific styles --- */
+.calendar-container { margin-top: 6px; }
+.calendar {
+  max-width: 840px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(16,142,64,0.08);
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.calendar-header button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.calendar-header h2 { font-size: 18px; color: var(--accent); margin: 0; }
+
+/* weekday row and grid */
+.day-names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+.days-grid .cell {
+  min-height: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: right;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.08s;
+  background: transparent;
+}
+.days-grid .cell:hover { transform: translateY(-2px); background: #f3f7f3; }
+.days-grid .cell .num {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.days-grid .cell.other-month .num { color: #bdbdbd; }
+.days-grid .cell.today .num { background: var(--accent); color: #fff; }
+.days-grid .cell.in-range { background: rgba(46,125,50,0.06); border-radius: 8px; }
+.days-grid .cell.selected .num {
+  background: #4caf50;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(76,175,80,0.18);
+}

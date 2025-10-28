@@ -1,0 +1,272 @@
+:root{
+  --header-height: 72px;
+  --sidebar-width: 260px;
+  --top-gap: 12px;
+  --footer-height: 72px;
+  --content-max-width: 1200px;
+  --bg: #369f44;
+  --card-bg: #fff;
+  --accent: #111827;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Sidebar: match UserDashboard sidebar structure & behavior */
+.sidebar {
+  position: fixed;
+  left: 12px;
+  top: calc(var(--header-height) + var(--top-gap)); /* sits under top navbar */
+  width: var(--sidebar-width);
+  bottom: calc(var(--footer-height) + 12px);
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 18px 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  overflow: auto;
+  z-index: 995;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar header/profile */
+.sidebar .profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.sidebar .profile img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.sidebar .profile-meta h3 { margin: 0; font-size: 1rem; }
+.sidebar .profile-meta p { margin: 2px 0 0; font-size: 0.85rem; color: #666; }
+
+/* Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  flex: 1 1 auto;
+}
+.menu-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.menu-item i { width: 18px; text-align: center; color: #666; }
+.menu-item span { display: inline-block; }
+.menu-item:hover { background: #f3f4f6; }
+.menu-item.active {
+  background: var(--accent);
+  color: #fff;
+}
+.menu-item.active i { color: #fff; }
+
+/* Pin logout button at bottom of sidebar for consistent layout */
+.sidebar .sidebar-logout {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(16,24,40,0.03);
+}
+.sidebar .sidebar-logout .logout {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 10px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #eee;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Main area */
+.main {
+  margin-left: calc(var(--sidebar-width) + 12px);
+  padding: 24px;
+  padding-bottom: calc(var(--footer-height) + 36px);
+  max-width: var(--content-max-width);
+  margin-right: auto;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height) - 48px);
+}
+
+/* Content wrapper */
+.content-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Title alignment to start immediately right of sidebar */
+.pet-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+  align-self: flex-start;
+}
+
+/* Cards header (moved to right edge) */
+.cards-area { display: flex; flex-direction: column; gap: 12px; }
+
+.cards-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+/* Search and add kept responsive but presentational here (remove if unused) */
+.cards-header input[type="text"] {
+  width: 360px;
+  max-width: 45%;
+  min-width: 160px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 0.95rem;
+  flex: 0 0 auto;
+}
+.cards-header .add-btn {
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Pet grid: 3 per row */
+.pet-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+/* Pet card layout: image left, content right */
+.pet-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.pet-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  flex: 0 0 160px;
+}
+.pet-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+.pet-info h3 { margin: 0 0 6px; }
+.pet-info p { margin: 0; color: #444; font-size: 0.95rem; }
+.pet-buttons { display: flex; gap: 8px; margin-top: 8px; }
+.pet-buttons button { padding: 6px 8px; border-radius: 6px; border: none; cursor: pointer; }
+.edit-btn { background:#f3f4f6; }
+.delete-btn { background:#fee2e2; }
+
+/* Footer same as appointment/footer used elsewhere */
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.footer-bar {
+  background: var(--card-bg);
+  border-top: 1px solid rgba(16,24,40,0.03);
+  height: var(--footer-height);
+  width: 100vw;
+  box-shadow: 0 -1px 8px rgba(0,0,0,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-inner {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  position: relative;
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.25rem;
+}
+.footer-inner .logout {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 1px solid #eee;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.footer-inner .footer-center {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .pet-container { grid-template-columns: repeat(2, 1fr); }
+  .cards-header input[type="text"] { width: 320px; max-width: 50%; }
+}
+@media (max-width: 900px) {
+  .sidebar { position: relative; width: 100%; top: 0; left: 0; bottom: auto; margin: 12px auto; z-index: 1; }
+  .main { margin-left: 12px; margin-right: 12px; padding-bottom: calc(var(--footer-height) + 24px); }
+  .pet-container { grid-template-columns: 1fr; }
+  .cards-header { justify-content: flex-start; gap: 8px; }
+  .cards-header input[type="text"] { width: 100%; max-width: none; min-width: 0; flex: 1 1 auto; }
+  .cards-header .add-btn { width: auto; }
+}
+@media (max-width: 700px) {
+  .pet-container { grid-template-columns: 1fr; }
+  .pet-card { flex-direction: column; }
+  .pet-card img { width: 100%; height: 200px; }
+}
