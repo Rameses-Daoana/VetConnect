@@ -1,0 +1,204 @@
+/* ✅ Scoped layout — only affects User Details page */
+.user-details-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #414629;
+  color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sidebar (scoped) */
+.user-details-page .sidebar {
+  width: 250px;
+  background: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details-page .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-details-page .sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-details-page .sidebar-nav li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.user-details-page .sidebar-nav li:hover,
+.user-details-page .sidebar-nav .active {
+  color: #4e5634;
+  font-weight: 600;
+}
+
+/* Main container */
+.user-details-page .user-details-container {
+  flex: 1;
+  padding: 30px 60px;
+  color: #fff;
+}
+
+/* Header */
+.user-details-page .user-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.user-details-page .search-bar {
+  position: relative;
+  width: 400px;
+  margin-bottom: 30px;
+}
+
+.user-details-page .search-bar input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #f5f5f5;
+  color: #000;
+  font-size: 1rem;
+}
+
+.user-details-page .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* User Info */
+.user-details-page .user-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.user-details-page .user-avatar {
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #4e5634;
+  border-radius: 50%;
+}
+
+.user-details-page .user-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.user-details-page .user-text p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+}
+
+.user-details-page .user-text span {
+  color: #dfe4d0;
+}
+
+/* Pet Cards */
+.user-details-page .pet-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.user-details-page .pet-card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 220px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.user-details-page .pet-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user-details-page .pet-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Stats Section */
+.user-details-page .user-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-details-page .stat-box {
+  background: #f5f5f5;
+  color: #000;
+  border-radius: 20px;
+  padding: 20px 40px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.user-details-page .stat-box h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Buttons */
+.user-details-page .actions {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.user-details-page .reset-btn,
+.user-details-page .delete-btn {
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.user-details-page .reset-btn:hover {
+  background: #d0d6c5;
+}
+
+.user-details-page .delete-btn {
+  background: #fff;
+  color: #b20000;
+}
+
+.user-details-page .delete-btn:hover {
+  background: #f4cccc;
+}

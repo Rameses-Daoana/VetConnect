@@ -150,7 +150,13 @@ html, body, #root {
   font-size: 0.95rem;
   flex: 0 0 auto;
 }
+/* IMPORTANT: The .add-btn is now styled as a link via <Link> */
 .cards-header .add-btn {
+  /* Reset link default styles */
+  text-decoration: none; 
+  display: flex; 
+  align-items: center;
+
   flex: 0 0 auto;
   padding: 10px 14px;
   border-radius: 8px;

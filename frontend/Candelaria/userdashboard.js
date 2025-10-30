@@ -91,15 +91,17 @@ export default function UserDashboard() {
           <Link to="/" className="menu-item active"><i>🏠</i><span>Dashboard</span></Link>
           <Link to="/pets" className="menu-item"><i>🐾</i><span>Pets</span></Link>
           <Link to="/add-appointment" className="menu-item"><i>📅</i><span>Appointments</span></Link>
+          <Link to="/user" className="menu-item"><i>🙍</i><span>User</span></Link>
           <a href="#" className="menu-item"><i>❓</i><span>FAQs</span></a>
           <a href="#" className="menu-item"><i>🔔</i><span>Notifications</span></a>
           <a href="#" className="menu-item"><i>💬</i><span>Help</span></a>
           <a href="#" className="menu-item"><i>⚙️</i><span>Settings</span></a>
+          
         </nav>
 
-        <div style={{ marginTop: 12 }}>
-          <button className="menu-item" style={{ width: "100%" }}>
-            <i>↩️</i><span>Logout</span>
+        <div className="sidebar-logout">
+          <button className="logout" style={{ width: "100%" }}>
+            <i>↩️</i> Logout
           </button>
         </div>
       </aside>

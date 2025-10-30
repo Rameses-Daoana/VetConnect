@@ -1,4 +1,3 @@
-// ...existing code...
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./pets.css";
@@ -36,12 +35,12 @@ function Dashboard() {
           <Link to="/" className="menu-item"><i>🏠</i><span>Dashboard</span></Link>
           <Link to="/pets" className="menu-item active"><i>🐾</i><span>Pets</span></Link>
           <Link to="/add-appointment" className="menu-item"><i>📅</i><span>Appointments</span></Link>
+          <Link to="/user" className="menu-item"><i>🙍</i><span>User</span></Link>
           <a href="#" className="menu-item"><i>❓</i><span>FAQs</span></a>
           <a href="#" className="menu-item"><i>🔔</i><span>Notifications</span></a>
           <a href="#" className="menu-item"><i>💬</i><span>Help</span></a>
           <a href="#" className="menu-item"><i>⚙️</i><span>Settings</span></a>
         </nav>
-
 
         <div className="sidebar-logout">
           <button className="logout" style={{ width: "100%" }}>
@@ -63,9 +62,9 @@ function Dashboard() {
                 onChange={(e) => setSearch(e.target.value)}
                 aria-label="Search pets"
               />
-              <button className="add-btn" type="button" aria-label="Add pet">
+              <Link to="/addPets" className="add-btn" aria-label="Add pet">
                 <i className="fas fa-plus" aria-hidden="true"></i> Add Pet
-              </button>
+              </Link>
             </div>
 
             <div className="pet-container">
@@ -86,7 +85,7 @@ function Dashboard() {
             </div>
           </div>
         </div>
-      </main>
+      </main> 
 
       <footer className="footer" role="contentinfo">
         <div className="footer-bar">
@@ -108,4 +107,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-// ...existing code...
