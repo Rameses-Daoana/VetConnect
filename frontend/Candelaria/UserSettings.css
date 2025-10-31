@@ -1,0 +1,220 @@
+/* Layout */
+.settings-container {
+  display: flex;
+  min-height: 100vh; /* allow full page scroll instead of fixed height */
+  background: #f5f6f8;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #fff;
+  color: #222;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #ddd;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #4b5320;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-meta h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.profile-meta p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Sidebar Menu */
+.menu {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #4b5320;
+  color: #fff;
+}
+
+.logout {
+  width: 100%;
+  padding: 10px;
+  background: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background: #8b0000;
+}
+
+/* Main Section */
+.settings-main {
+  margin-left: 250px;
+  padding: 50px 70px;
+  width: calc(100% - 250px);
+  background: #f5f6f8;
+  overflow: visible; /* removed internal scroll */
+}
+
+.settings-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.settings-header p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Settings Form */
+.settings-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+/* Profile Picture Label */
+.profile-label {
+  font-weight: 600;
+  color: #4b5320;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Upload Area */
+.image-upload {
+  margin-bottom: 25px;
+}
+
+.upload-box {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border: 2px dashed #4b5320;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5320;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  background: #f9faf7;
+}
+
+.upload-box:hover {
+  background: #e5e9dc;
+}
+
+.uploaded-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.upload-placeholder {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* Input Fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #4b5320;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #4b5320;
+  outline: none;
+}
+
+/* Save Button */
+.save-btn {
+  margin-top: 15px;
+  background: #4b5320;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #3c4a1e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .settings-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 30px 20px;
+  }
+}

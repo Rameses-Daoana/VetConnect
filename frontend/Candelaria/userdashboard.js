@@ -95,7 +95,7 @@ export default function UserDashboard() {
           <a href="#" className="menu-item"><i>❓</i><span>FAQs</span></a>
           <a href="#" className="menu-item"><i>🔔</i><span>Notifications</span></a>
           <a href="#" className="menu-item"><i>💬</i><span>Help</span></a>
-          <a href="#" className="menu-item"><i>⚙️</i><span>Settings</span></a>
+          <Link to="/settings" className="menu-item"><i>⚙️</i><span>Settings</span></Link>
           
         </nav>
 

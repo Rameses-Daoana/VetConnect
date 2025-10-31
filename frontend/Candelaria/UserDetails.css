@@ -1,204 +1,159 @@
-/* ✅ Scoped layout — only affects User Details page */
-.user-details-page {
+/* MAIN LAYOUT */
+.settings-container {
   display: flex;
-  min-height: 100vh;
-  background-color: #414629;
-  color: #000;
-  font-family: "Inter", sans-serif;
+  height: 100vh;
+  background: #f5f6f8;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
-/* Sidebar (scoped) */
-.user-details-page .sidebar {
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
   width: 250px;
-  background: #f5f5f5;
-  padding: 20px;
+  background: #fff;
+  color: #222;
+  padding: 25px 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #ddd;
+  z-index: 10;
 }
 
-.user-details-page .logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.profile {
+  text-align: center;
 }
 
-.user-details-page .sidebar-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.user-details-page .sidebar-nav li {
-  margin-bottom: 20px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.user-details-page .sidebar-nav li:hover,
-.user-details-page .sidebar-nav .active {
-  color: #4e5634;
-  font-weight: 600;
-}
-
-/* Main container */
-.user-details-page .user-details-container {
-  flex: 1;
-  padding: 30px 60px;
-  color: #fff;
-}
-
-/* Header */
-.user-details-page .user-header h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-/* Search Bar */
-.user-details-page .search-bar {
-  position: relative;
-  width: 400px;
-  margin-bottom: 30px;
-}
-
-.user-details-page .search-bar input {
-  width: 100%;
-  padding: 10px 40px 10px 15px;
-  border-radius: 10px;
-  border: none;
-  background: #f5f5f5;
-  color: #000;
-  font-size: 1rem;
-}
-
-.user-details-page .search-icon {
-  position: absolute;
-  right: 15px;
-  top: 8px;
-  font-size: 1.2rem;
-  color: #444;
-}
-
-/* User Info */
-.user-details-page .user-info {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.user-details-page .user-avatar {
-  width: 100px;
-  height: 100px;
-  font-size: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  color: #4e5634;
+.profile img {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4b5320;
+  margin-bottom: 10px;
 }
 
-.user-details-page .user-text h3 {
-  font-size: 1.4rem;
+.profile-meta h3 {
+  font-size: 18px;
   margin-bottom: 5px;
 }
 
-.user-details-page .user-text p {
-  margin: 3px 0;
-  font-size: 0.95rem;
+.profile-meta p {
+  font-size: 14px;
+  color: #666;
 }
 
-.user-details-page .user-text span {
-  color: #dfe4d0;
-}
-
-/* Pet Cards */
-.user-details-page .pet-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-
-.user-details-page .pet-card {
-  background: #fff;
-  color: #000;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  width: 220px;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.user-details-page .pet-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-right: 10px;
-}
-
-.user-details-page .pet-info h4 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-/* Stats Section */
-.user-details-page .user-stats {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.user-details-page .stat-box {
-  background: #f5f5f5;
-  color: #000;
-  border-radius: 20px;
-  padding: 20px 40px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.user-details-page .stat-box h3 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-/* Buttons */
-.user-details-page .actions {
+.menu {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
   gap: 10px;
 }
 
-.user-details-page .reset-btn,
-.user-details-page .delete-btn {
-  background: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-weight: 600;
+.menu-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: 10px;
   transition: 0.3s;
 }
 
-.user-details-page .reset-btn:hover {
-  background: #d0d6c5;
+.menu-item:hover,
+.menu-item.active {
+  background: #4b5320;
+  color: #fff;
 }
 
-.user-details-page .delete-btn {
+.sidebar-logout {
+  margin-top: auto;
+}
+
+.logout {
+  width: 100%;
+  padding: 10px;
+  background: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background: #8b0000;
+}
+
+/* MAIN CONTENT */
+.settings-main {
+  flex: 1;
+  margin-left: 250px; /* pushes content beside sidebar */
+  padding: 40px 60px;
+  overflow-y: auto;
+}
+
+.settings-header h1 {
+  font-size: 28px;
+  color: #222;
+}
+
+.settings-header p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.settings-form {
   background: #fff;
-  color: #b20000;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
 }
 
-.user-details-page .delete-btn:hover {
-  background: #f4cccc;
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #4b5320;
+}
+
+.save-btn {
+  background: #4b5320;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #3a4219;
 }

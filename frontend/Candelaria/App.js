@@ -1,14 +1,22 @@
-import React from "react";
-import {BrowserRouter as Router, Routes, Route, NavLink, useLocation,} from "react-router-dom";
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+  useLocation,
+} from "react-router-dom";
 import Dashboard from "./userdashboard";
 import Pets from "./pets";
 import AddAppointment from "./Appointment";
 import AddPet from "./AddPet";
-import UserDetails from "./UserDetails"; 
+import UserDetails from "./UserDetails";
+import UserSettings from "./UserSettings";
 import "./App.css";
 
 function Layout() {
   const location = useLocation();
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   // Hide sidebar on specific pages
   const hideSidebar =
@@ -17,28 +25,28 @@ function Layout() {
 
   return (
     <div className="App">
-      {/* Global Header */}
+      {/* Header */}
       <header className="header">
         <div className="header-left">
-          <img
-            src="/img/logo_black.png"
-            alt="VetConnect Logo"
-            className="logo"
-          />
+          <img src="/img/logo_black.png" alt="VetConnect Logo" className="logo" />
           <h2 className="logo-text">VetConnect</h2>
         </div>
+
+        {/* Toggle Button for Sidebar */}
+        <button
+          className="sidebar-toggle"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          ☰
+        </button>
       </header>
 
-      {/* Page Layout */}
+      {/* Layout */}
       <div className="layout">
         {!hideSidebar && (
-          <aside className="sidebar">
+          <aside className={`sidebar ${sidebarOpen ? "open" : "collapsed"}`}>
             <div className="profile">
-              <img
-                src="/img/profile.jfif"
-                alt="Profile"
-                className="profile-img"
-              />
+              <img src="/img/profile.jfif" alt="Profile" className="profile-img" />
               <div className="profile-info">
                 <h3>Eren Jaeger</h3>
                 <p>eren@gmail.com</p>
@@ -61,6 +69,10 @@ function Layout() {
               <NavLink to="/user" className="menu-item">
                 <i>🙍</i> <span>User</span>
               </NavLink>
+
+              <NavLink to="/settings" className="menu-item">
+                <i>⚙️</i> <span>Settings</span>
+              </NavLink>
             </nav>
 
             <div className="logout-section">
@@ -79,6 +91,7 @@ function Layout() {
             <Route path="/add-appointment" element={<AddAppointment />} />
             <Route path="/addPets" element={<AddPet />} />
             <Route path="/user" element={<UserDetails />} />
+            <Route path="/settings" element={<UserSettings />} />
             <Route
               path="*"
               element={
@@ -95,7 +108,7 @@ function Layout() {
         </main>
       </div>
 
-      {/* Global Footer */}
+      {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-item">📞 (02) 9876 5432</div>
